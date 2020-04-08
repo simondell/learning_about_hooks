@@ -1,9 +1,15 @@
 import React, {
-  useState
+  useEffect,
+  useState,
 } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  // this runs after each render
+  useEffect(() => {
+    document.title = `Clicked ${count} times`
+  })
 
   return (
     <div className="App">
